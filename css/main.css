@@ -98,6 +98,31 @@
         cursor: pointer;
         color: #9E449A; }
 
+#features {
+  background-color: lightgray;
+  padding: 50px 15px;
+  text-align: center; }
+  #features .feature .feature-icon {
+    position: relative;
+    padding: 60px;
+    margin-bottom: 45px; }
+    #features .feature .feature-icon:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url("../images/navigation-icon.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.3; }
+    #features .feature .feature-icon img {
+      position: relative;
+      z-index: 1; }
+  #features .feature h3 {
+    margin-bottom: 45px; }
+
 body {
   font-family: 'Lato', sans-serif; }
 
