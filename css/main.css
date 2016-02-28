@@ -99,8 +99,8 @@
         color: #9E449A; }
 
 #features {
-  background-color: lightgray;
-  padding: 50px 15px;
+  background-color: #ececec;
+  padding: 100px 30px;
   text-align: center; }
   #features .feature .feature-icon {
     position: relative;
@@ -122,6 +122,38 @@
       z-index: 1; }
   #features .feature h3 {
     margin-bottom: 45px; }
+
+#about h3 {
+  padding: 20px;
+  width: 20%;
+  position: relative;
+  text-align: center;
+  margin: 100px auto; }
+  #about h3:after {
+    transform: rotate(-180deg);
+    content: "";
+    background-image: url("../images/corner.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1; }
+  #about h3:before {
+    content: "";
+    background-image: url("../images/corner.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1; }
+  #about h3 img {
+    width: 100%; }
 
 body {
   font-family: 'Lato', sans-serif; }
