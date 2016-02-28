@@ -1,2 +1,9 @@
-@import "partials/reset";
 @import "partials/jumbotron";
+@import "modules/mixins";
+
+.colored-letters {
+    color: $colored-letters;
+}
+body {
+    font-family: 'Lato', sans-serif;
+}
