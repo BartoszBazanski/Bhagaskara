@@ -1,0 +1,25 @@
+#inline-navigation {
+    padding: 35px;
+    height: 100px;
+    .brand {
+        float: left;
+        img {
+            width: 100%;
+        }
+    }
+    ul {
+        font-size: 12px;
+        font-weight: bold;
+        list-style-type: none;
+        text-transform: uppercase;
+        li {
+            padding: (38px - 12px)/2 0;
+            text-align: center;
+            float: right;
+            &:hover {
+                cursor: pointer;
+                color: $main-color;
+            }
+        }
+    }
+}

@@ -78,8 +78,25 @@
     #jumbotron .nav-item .nav-content .nav-text {
       margin: 0 auto; }
 
-.colored-letters {
-  color: purple; }
+#inline-navigation {
+  padding: 35px;
+  height: 100px; }
+  #inline-navigation .brand {
+    float: left; }
+    #inline-navigation .brand img {
+      width: 100%; }
+  #inline-navigation ul {
+    font-size: 12px;
+    font-weight: bold;
+    list-style-type: none;
+    text-transform: uppercase; }
+    #inline-navigation ul li {
+      padding: 13px 0;
+      text-align: center;
+      float: right; }
+      #inline-navigation ul li:hover {
+        cursor: pointer;
+        color: #9E449A; }
 
 body {
   font-family: 'Lato', sans-serif; }
