@@ -102,11 +102,11 @@
   background-color: #ececec;
   padding: 100px 30px;
   text-align: center; }
-  #features .feature .feature-icon {
+  #features .feature .icon {
     position: relative;
     padding: 60px;
     margin-bottom: 45px; }
-    #features .feature .feature-icon:before {
+    #features .feature .icon:before {
       content: "";
       position: absolute;
       top: 0;
@@ -117,7 +117,7 @@
       background-repeat: no-repeat;
       background-position: center;
       opacity: 0.3; }
-    #features .feature .feature-icon img {
+    #features .feature .icon img {
       position: relative;
       z-index: 1; }
   #features .feature h3 {
@@ -181,6 +181,38 @@
       z-index: -1; }
     #about h3 img {
       width: 100%; }
+
+.interlude {
+  background-image: url("../images/landscape.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -400px;
+  width: 100%;
+  height: 500px;
+  padding: 160px 0; }
+  .interlude h3 {
+    font-size: 30px;
+    text-align: center;
+    color: white; }
+  .interlude .icon {
+    width: 183px;
+    position: relative;
+    padding: 60px 55px;
+    margin: 0 auto; }
+    .interlude .icon:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url("../images/navigation-icon.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.3; }
+    .interlude .icon img {
+      position: relative;
+      z-index: 1; }
 
 body {
   font-family: 'Lato', sans-serif; }
