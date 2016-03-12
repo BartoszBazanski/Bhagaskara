@@ -1,0 +1,28 @@
+#our-skills {
+    .skill-level {
+        padding: 15px;
+        .skill {
+            height: 20px;
+            .skill-name {
+                text-transform: uppercase;
+                font-weight: bold;
+                color: black;
+                float: left;
+            }
+        }
+        .skill-percentage{
+            float: right;
+        }
+        .skill-bar{
+            width: 100%;
+            height: 20px;
+            margin: 10px 0;
+            background-color: lightgray;
+            .skill-progress {
+                float: left;
+                background-color: $main-color;
+                height: 100%;
+            }
+        }
+    }
+}

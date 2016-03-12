@@ -217,6 +217,27 @@
     width: 50px;
     height: 50px; }
 
+#our-skills .skill-level {
+  padding: 15px; }
+  #our-skills .skill-level .skill {
+    height: 20px; }
+    #our-skills .skill-level .skill .skill-name {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: black;
+      float: left; }
+  #our-skills .skill-level .skill-percentage {
+    float: right; }
+  #our-skills .skill-level .skill-bar {
+    width: 100%;
+    height: 20px;
+    margin: 10px 0;
+    background-color: lightgray; }
+    #our-skills .skill-level .skill-bar .skill-progress {
+      float: left;
+      background-color: #9E449A;
+      height: 100%; }
+
 body {
   font-family: 'Lato', sans-serif; }
 
