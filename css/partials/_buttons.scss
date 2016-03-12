@@ -10,6 +10,7 @@
         height: 50px;
         background-color: $main-color;
         color: white;
+        cursor: pointer;
         &:before {
             content: "";
             position: absolute;

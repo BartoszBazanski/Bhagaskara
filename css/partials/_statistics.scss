@@ -2,8 +2,8 @@
     background-color: lighten(lightgray, 10);
     text-align: center;
     .stat-numbers{ 
-        margin-bottom: 30px;
-        height: 100px;
+        margin-bottom: 60px;
+        overflow: auto;
         .stat-value{
             font-size: 50px;
         }

@@ -60,41 +60,42 @@
             padding: (83px - 17px)/2 (75px - 30px)/2;
         }
     }
-    .nav-item{
-        &:hover{
-            cursor: pointer;
-            &:after {
-                background-image: url("../images/navigation-icon-hover.png");
-                opacity: 1;
-            }
-        }
+    .nav-item {
+        position: relative;
+        padding: 45px 15px;
+        margin: 10px auto;
+        height: 160px;
+        width: 150px;
+        cursor: pointer;
         &:after{
             content: "";
-            background-image: url("../images/navigation-icon.png");
-            background-size: 80%;
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.3;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
             position: absolute;
-            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: url("../images/navigation-icon.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: .3;
+            z-index: 1;
         }
-        .nav-content {
-            padding: 45px 15px;
-            height: 100%;
-            width: 100%;
+        &:hover:after{
+            content: "";
+            background-image: url("../images/navigation-icon-hover.png");
+            opacity: 1;
+        }
+        .nav-icon, .nav-text {
+            position: relative;
             z-index: 4;
-            .nav-icon {
-                width: 40%;
-                margin: 0 auto 10px auto;
-            }
-            .nav-text {
-                margin: 0 auto;
-
-            }
+        }
+        .nav-icon {
+            width: 40%;
+            margin: 0 auto 10px auto;
+        }
+        .nav-text {
+            margin: 0 auto;
         }
     }
 }
