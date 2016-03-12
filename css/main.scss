@@ -1,11 +1,14 @@
 @import "modules/mixins";
 @import "partials/jumbotron";
 @import "partials/navigation";
+@import "partials/buttons";
 @import "partials/features";
 @import "partials/about";
 @import "partials/interlude";
 @import "partials/team";
 @import "partials/skills";
+@import "partials/statistics";
+@import "partials/portfolio";
 
 body {
     font-family: 'Lato', sans-serif;
@@ -13,9 +16,13 @@ body {
 section {
     padding: 100px 30px;
 }
+.section-heading {
+    text-align: center;
+}
 h3 {
+        clear: both;
         padding: 20px;
-        width: 25%;
+        display: inline-block;
         position: relative;
         text-align: center;
         margin: 0 auto 100px auto;

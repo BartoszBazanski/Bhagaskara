@@ -1,0 +1,26 @@
+#portfolio {
+    .category-selector {
+        list-style-type: none;
+        text-align: center;
+        padding: 0;
+        cursor: pointer;
+        li {
+            margin: 0 5px;
+            display: inline-block;
+            width: 100px;
+            height: 43px;
+            text-transform: uppercase;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            &:hover{
+                color: white;
+                background-color: $main-color;
+                border-color: $main-color;
+            }
+        }
+    }
+}
