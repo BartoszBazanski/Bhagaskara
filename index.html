@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap-theme.css">
         <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="css/main.css">
-        <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
     </head>
     <body>
@@ -70,18 +70,20 @@
         </section>
         <section id="inline-navigation">
             <div class="container">
-                <div class="col-xs-12 col-md-3 brand">
+                <div class="brand">
                     <img src="images/bhagaskara-black.png">
                 </div>
-                <ul>
-                    <li class="col-xs-6 col-md-1">Home</li>
-                    <li class="col-xs-6 col-md-1">About</li>
-                    <li class="col-xs-6 col-md-1">Team</li>
-                    <li class="col-xs-6 col-md-1">Services</li>
-                    <li class="col-xs-6 col-md-1">Portfolio</li>
-                    <li class="col-xs-6 col-md-1">Blog</li>
-                    <li class="col-xs-12 col-md-1">Contact</li>
-                </ul>
+                <div class="hamburger">
+                    <ul>
+                        <li class="inline-nav">Home</li>
+                        <li class="inline-nav">About</li>
+                        <li class="inline-nav">Team</li>
+                        <li class="inline-nav">Services</li>
+                        <li class="inline-nav">Portfolio</li>
+                        <li class="inline-nav">Blog</li>
+                        <li class="inline-nav">Contact</li>
+                    </ul>
+                </div>
             </div>
         </section>
         <section id="features">
@@ -147,7 +149,7 @@
             </div>
             <div class="quote">We lorem and ipsum your aliquam</div>
         </section>
-        <section id="out-team">
+        <section id="our-team">
             <div class="container">
                 <div class="section-heading">
                     <h3>
@@ -155,13 +157,13 @@
                     </h3>
                 </div>
                 <div class="slider-navigation">
-                    <div class="arrow-left">&lt</div>
-                    <div class="arrow-right">&gt</div>
+                    <button onclick="prev()" class="arrow-left">&lt</button>
+                    <button onclick="next()" class="arrow-right">&gt</button>
                 </div>
                 <div class="team-slider">
-                    <div class="team-member col-md-4">
+                    <div class="team-member col-md-4 col-xs-12">
                         <img class="team-member-photo" src="images/face.png" alt="Team member photo"/>
-                        <p class="member-name">Anne Hathaway</p>
+                        <p class="member-name">Hugo</p>
                         <p class="member-position"> CEO / Marketing Guru</p>
                         <div class="social-media-buttons">
                             <div class="facebook-button">
@@ -172,9 +174,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="team-member col-md-4">
+                    <div class="team-member highlighted col-md-4 col-xs-12">
                         <img class="team-member-photo" src="images/face.png" alt="Team member photo"/>
-                        <p class="member-name">Anne Hathaway</p>
+                        <p class="member-name">Anne</p>
                         <p class="member-position"> CEO / Marketing Guru</p>
                         <div class="social-media-buttons">
                             <div class="facebook-button">
@@ -185,9 +187,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="team-member col-md-4">
+                    <div class="team-member col-md-4 col-xs-12">
                         <img class="team-member-photo" src="images/face.png" alt="Team member photo"/>
-                        <p class="member-name">Anne Hathaway</p>
+                        <p class="member-name">Boris</p>
+                        <p class="member-position"> CEO / Marketing Guru</p>
+                            <div class="facebook-button">
+                                <img src="images/f.png" />
+                            </div>
+                            <div class="google-button">
+                                <img src="images/g.png" />
+                            </div>
+                    </div>
+                    <div class="team-member col-md-4 col-xs-12">
+                        <img class="team-member-photo" src="images/face.png" alt="Team member photo"/>
+                        <p class="member-name">Profesor X</p>
                         <p class="member-position"> CEO / Marketing Guru</p>
                             <div class="facebook-button">
                                 <img src="images/f.png" />
@@ -296,10 +309,10 @@
                     </h3>
                 </div>
                 <ul class="category-selector">
-                    <li>All</li>
-                    <li>Web</li>
-                    <li>Apps</li>
-                    <li>Icons</li>
+                    <li class="category checked">All</li>
+                    <li class="category">Web</li>
+                    <li class="category">Apps</li>
+                    <li class="category">Icons</li>
                 </ul>
                 <div id="portfolio-gallery">
                     <div class="col-md-4 col-xs-12">
@@ -355,7 +368,7 @@
                         <img src="images/getintouch.png" alt="Header of contact section" />
                     </h3>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-xs-12">
                     <form>
                         <input type="text" placeholder="Your Name">
                         <input type="text" placeholder="Your Email">
@@ -363,7 +376,7 @@
                     </form>
                     <div class="button">Send email</div>
                 </div>
-                <div class="col-md-6">
+                <div class="contact-info col-md-6 col-xs-12">
                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
                     <address>
                         1600 Pensylvania Ave NW, Waschington<br>

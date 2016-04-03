@@ -30,4 +30,9 @@
     p {
         font-size: 16px;
     }
+    @media ("max-width: 992px"){
+        .contact-info {
+            padding-top: 20px;
+        }
+    }
 }

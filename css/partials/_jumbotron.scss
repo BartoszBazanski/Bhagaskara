@@ -41,6 +41,7 @@
         position: relative;
         width: 75px;
         margin: 15px auto;
+        cursor: pointer;
         &:after {
             content: "";
             background-image: url("../images/navigation-icon.png");
@@ -98,4 +99,7 @@
             margin: 0 auto;
         }
     }
+}
+.fantom-space {
+    margin-bottom: 125px;
 }

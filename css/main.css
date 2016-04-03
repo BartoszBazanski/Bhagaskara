@@ -33,7 +33,8 @@
   #jumbotron .scroller {
     position: relative;
     width: 75px;
-    margin: 15px auto; }
+    margin: 15px auto;
+    cursor: pointer; }
     #jumbotron .scroller:after {
       content: "";
       background-image: url("../images/navigation-icon.png");
@@ -82,26 +83,63 @@
     #jumbotron .nav-item .nav-text {
       margin: 0 auto; }
 
+.fantom-space {
+  margin-bottom: 125px; }
+
+.fixed-position {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+  border-bottom: 1px solid gray; }
+
 #inline-navigation {
   padding: 15px; }
   #inline-navigation .brand {
     float: left;
     text-align: center;
     padding: 11px 0; }
-  #inline-navigation ul {
-    overflow: auto;
-    padding: 5px;
-    font-size: 12px;
-    font-weight: bold;
-    list-style-type: none;
-    text-transform: uppercase; }
-    #inline-navigation ul li {
-      padding: 20px 0;
-      text-align: center;
-      float: right; }
-      #inline-navigation ul li:hover {
-        cursor: pointer;
-        color: #9E449A; }
+  #inline-navigation .hamburger {
+    position: relative;
+    float: right; }
+    #inline-navigation .hamburger ul {
+      margin-bottom: 0;
+      overflow: auto;
+      padding: 5px;
+      font-size: 12px;
+      font-weight: bold;
+      list-style-type: none;
+      text-transform: uppercase; }
+      #inline-navigation .hamburger ul li {
+        width: 80px;
+        padding: 20px 0;
+        text-align: center;
+        float: left; }
+        #inline-navigation .hamburger ul li:hover {
+          cursor: pointer;
+          color: #9E449A; }
+  @media (max-width: 1000px) {
+    #inline-navigation .hamburger {
+      width: 60px;
+      height: 60px;
+      background-image: url("../images/hamburger.png");
+      background-size: cover;
+      cursor: pointer; }
+      #inline-navigation .hamburger .visible {
+        display: block; }
+      #inline-navigation .hamburger ul {
+        display: none;
+        width: 200px;
+        position: absolute;
+        top: 0;
+        left: -210px;
+        z-index: 5;
+        background-color: white;
+        border: 1px solid gray;
+        border-radius: 5px; }
+        #inline-navigation .hamburger ul li {
+          width: 100%; } }
 
 .button {
   position: relative;
@@ -115,17 +153,11 @@
   height: 50px;
   background-color: #9E449A;
   color: white;
-  cursor: pointer; }
-  .button:before {
-    content: "";
-    position: absolute;
-    background-color: #7a3577;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    border-radius: 5px; }
+  cursor: pointer;
+  box-shadow: 0 5px #7a3577; }
+  .button:active {
+    box-shadow: 0 2px #7a3577;
+    transform: translateY(3px); }
 
 #features {
   background-color: #ececec;
@@ -202,29 +234,50 @@
     background-image: url("../images/navigation-icon-hover.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: white;
+    border: none;
     font-size: 30px;
     height: 56px;
     width: 50px;
     padding: 5px;
     text-align: center; }
+    .slider-navigation .arrow-left:focus, .slider-navigation .arrow-left:active, .slider-navigation .arrow-right:focus, .slider-navigation .arrow-right:active {
+      outline: none;
+      border: none; }
+  .slider-navigation .disabled {
+    background-image: none;
+    border-radius: 50%;
+    background-color: lightgray;
+    color: gray; }
 
 .team-slider {
+  position: relative;
+  overflow-x: hidden;
   text-align: center; }
-  .team-slider .team-member-photo {
-    border-radius: 50%;
-    width: 75%;
-    margin-bottom: 20px; }
-  .team-slider .member-name {
-    text-transform: uppercase;
-    font-size: 25px; }
-  .team-slider .facebook-button, .team-slider .google-button {
-    display: inline-block;
-    padding: 16px 0;
-    margin: 10px;
-    border: 1px solid lightgray;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px; }
+  .team-slider .team-member {
+    position: absolute;
+    z-index: 6;
+    padding: 25px 0; }
+    .team-slider .team-member .team-member-photo {
+      border-radius: 50%;
+      width: 75%;
+      margin-bottom: 20px; }
+    .team-slider .team-member .member-name {
+      text-transform: uppercase;
+      font-size: 25px; }
+    .team-slider .team-member .facebook-button, .team-slider .team-member .google-button {
+      display: inline-block;
+      padding: 16px 0;
+      margin: 10px;
+      border: 1px solid lightgray;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px; }
+  .team-slider .highlighted {
+    position: relative;
+    left: calc(100%/3); }
+    .team-slider .highlighted .team-member-photo {
+      box-shadow: 0 15px 65px #9E449A; }
 
 #our-skills .skill-level {
   padding: 15px; }
@@ -287,7 +340,7 @@
   padding: 0;
   cursor: pointer;
   margin-bottom: 40px; }
-  #portfolio .category-selector li {
+  #portfolio .category-selector .category {
     margin: 0 5px;
     display: inline-block;
     width: 100px;
@@ -295,14 +348,22 @@
     text-transform: uppercase;
     padding: 10px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 5px #e6e6e6;
     border-radius: 5px;
     font-size: 16px;
     font-weight: bold; }
-    #portfolio .category-selector li:hover {
+    #portfolio .category-selector .category:not(.checked):hover {
       color: white;
-      background-color: #9E449A;
-      border-color: #9E449A; }
+      box-shadow: 0 5px #7a3577;
+      border: 1px solid #7a3577;
+      background-color: #9E449A; }
+  #portfolio .category-selector .checked {
+    color: white;
+    background-color: #9E449A;
+    border: 1px solid #7a3577;
+    box-shadow: 0 2px #7a3577;
+    transform: translateY(3px); }
 
 #portfolio-gallery {
   overflow: auto; }
@@ -387,6 +448,9 @@
   float: left; }
 #contact p {
   font-size: 16px; }
+@media (max-width: 992px) {
+  #contact .contact-info {
+    padding-top: 20px; } }
 
 footer {
   text-align: center;
@@ -400,16 +464,21 @@ body {
 section {
   padding: 100px 30px; }
 
+#our-skills {
+  padding: 0 30px 100px 30px; }
+
+#our-team {
+  padding: 100px 30px 0 30px; }
+
 .section-heading {
   text-align: center; }
 
 h3 {
-  clear: both;
   padding: 20px;
   display: inline-block;
   position: relative;
   text-align: center;
-  margin: 0 auto 100px auto; }
+  margin: 0 auto 30px auto; }
   h3:after {
     transform: rotate(-180deg);
     content: "";
