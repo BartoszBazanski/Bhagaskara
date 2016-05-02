@@ -5,4 +5,4 @@ Website developed during Coders' Lab workshops.
 1. Sticky header after scrolling below jumbotron section.
 2. ...
 
-#####[Website demo](https://...)
+#####[Website demo](http://bartoszbazanski.github.io/Bhagaskara/)
